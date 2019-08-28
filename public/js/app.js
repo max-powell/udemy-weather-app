@@ -22,7 +22,7 @@ form.addEventListener('submit', function(e) {
   results.innerHTML = ''
   addResultElement('Loading...')
 
-  fetch('http://localhost:3000/weather?address=' + input.value)
+  fetch('/weather?address=' + input.value)
     .then(res => res.json())
     .then(json => {
       results.innerHTML = ''
